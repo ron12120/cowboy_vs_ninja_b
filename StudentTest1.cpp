@@ -485,6 +485,7 @@ TEST_SUITE("Battle simulations") {
         CHECK(!young_ninja2->isAlive());
 
         multi_attack(2, team, team2);
+
         CHECK_NOTHROW(team.attack(
                 &team2)); // The entire enemy team will be dead before every cowboy shoots, the attack should stop and not throw an exception
         CHECK_FALSE(young_ninja2->isAlive()); // Young ninja should be dead

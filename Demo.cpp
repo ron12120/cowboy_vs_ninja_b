@@ -24,7 +24,8 @@ int main() {
     OldNinja *sushi = new OldNinja("sushi", b);
     tom->shoot(sushi);
     cout << tom->print() <<endl;
-
+    
+     
     sushi->move(tom);
     sushi->slash(tom);
 
@@ -36,7 +37,7 @@ int main() {
      Team team_B(sushi);
      team_B.add(new TrainedNinja("Hikari", Point(12,81)));
 
-
+      
      while(team_A.stillAlive() > 0 && team_B.stillAlive() > 0){
         team_A.attack(&team_B);
         team_B.attack(&team_A);
